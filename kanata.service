@@ -1,0 +1,13 @@
+[Unit]
+Description=Kanata keyboard remapper
+After=systemd-udev-settle.service
+Wants=systemd-udev-settle.service
+
+[Service]
+Type=simple
+ExecStart=/home/yuchao/.cargo/bin/kanata --cfg /home/yuchao/.config/kanata/kanata.kbd --no-wait
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target

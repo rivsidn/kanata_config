@@ -1,0 +1,141 @@
+;; Quote-key symbol layer for a US-QWERTY OS layout.
+;; - tap Enter: Enter with no tap-hold delay
+;; - hold apostrophe ('): symbols/nav/edit layer only; tapping it outputs nothing
+
+(defcfg
+  process-unmapped-keys yes
+  sequence-timeout 2000
+  dynamic-macro-max-presses 1000
+)
+
+(defvar
+  td 200
+)
+
+(defalias
+  ;; Shift also activates a small shifted layer so Shift+Caps outputs Caps Lock.
+  sfl (multi lsft (layer-while-held shifted))
+  sfr (multi rsft (layer-while-held shifted))
+
+  ;; Apostrophe is only a layer key; tapping it does not emit apostrophe.
+  quo (layer-while-held symbols)
+
+  ;; Alt+n then 0-9 starts recording; Alt+b stops recording; Alt+m then 0-9 plays it.
+  drec (fork n (multi (release-key lalt) (release-key ralt) (macro sldr 10 nop0)) (lalt ralt))
+  dply (fork m (multi (release-key lalt) (release-key ralt) (macro sldr 10 nop1)) (lalt ralt))
+  dstop (fork b (multi (release-key lalt) (release-key ralt) (dynamic-macro-record-stop-truncate 1)) (lalt ralt))
+
+  ;; Force Caps output without carrying Shift through.
+  cap (unshift caps)
+
+  ;; Tap-dance pairs inside the apostrophe symbols layer.
+  ;; 1 tap / 2 taps: double quote / single quote.
+  dq  (tap-dance $td (S-' '))
+  cb  (tap-dance $td (S-[ S-]))
+  br  (tap-dance $td ([ ]))
+  pr  (tap-dance $td (S-9 S-0))
+
+  ;; Symbols that require Shift on a US-QWERTY layout.
+  pipe S-\
+  plus S-=
+  star S-8
+  us   S--
+  ques S-/
+)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '         ret
+  lsft z    x    c    v    b    n    m    ,    .    /              rsft
+  lctl lmet lalt                spc                 ralt rmet rctl
+)
+
+(deflayer base
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  lctl a    s    d    f    g    h    j    k    l    ;    @quo      ret
+  @sfl z    x    c    v    @dstop @drec @dply ,    .    /              @sfr
+  lctl lmet lalt                spc                 ralt rmet rctl
+)
+
+;; Shift+Caps -> Caps Lock.
+(deflayer shifted
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  @cap _    _    _    _    _    _    _    _    _    _    _          _
+  @sfl _    _    _    _    _    _    _    _    _    _               @sfr
+  _    _    _                   _                   _    _    _
+)
+
+;; Hold apostrophe, then press a key in this layer.
+(deflayer symbols
+  _    _    _    _    _    _    _    _    _    _    _    _     _    _
+  esc  @dq  @cb  @br  @pr  @pipe _    _    _    _    up   _     _    _
+  bspc @plus -    @star /    =    _    _    _    left rght _          _
+  _    @us  @ques grv  \    _    _    _    _    down _               _
+  _    _    _                   _                   _    _    _
+)
+
+(defseq
+  drec0 (nop0 0)
+  drec1 (nop0 1)
+  drec2 (nop0 2)
+  drec3 (nop0 3)
+  drec4 (nop0 4)
+  drec5 (nop0 5)
+  drec6 (nop0 6)
+  drec7 (nop0 7)
+  drec8 (nop0 8)
+  drec9 (nop0 9)
+  dply0 (nop1 0)
+  dply1 (nop1 1)
+  dply2 (nop1 2)
+  dply3 (nop1 3)
+  dply4 (nop1 4)
+  dply5 (nop1 5)
+  dply6 (nop1 6)
+  dply7 (nop1 7)
+  dply8 (nop1 8)
+  dply9 (nop1 9)
+)
+
+(defvirtualkeys
+  drec0 (dynamic-macro-record 0)
+  drec1 (dynamic-macro-record 1)
+  drec2 (dynamic-macro-record 2)
+  drec3 (dynamic-macro-record 3)
+  drec4 (dynamic-macro-record 4)
+  drec5 (dynamic-macro-record 5)
+  drec6 (dynamic-macro-record 6)
+  drec7 (dynamic-macro-record 7)
+  drec8 (dynamic-macro-record 8)
+  drec9 (dynamic-macro-record 9)
+  dply0 (dynamic-macro-play 0)
+  dply1 (dynamic-macro-play 1)
+  dply2 (dynamic-macro-play 2)
+  dply3 (dynamic-macro-play 3)
+  dply4 (dynamic-macro-play 4)
+  dply5 (dynamic-macro-play 5)
+  dply6 (dynamic-macro-play 6)
+  dply7 (dynamic-macro-play 7)
+  dply8 (dynamic-macro-play 8)
+  dply9 (dynamic-macro-play 9)
+)
+
+;; Alt+u/i -> Page Down/Page Up; Alt+h/j/k/l -> arrow keys.
+;; Both left and right Alt are supported.
+(defoverrides
+  (lalt u) (pgdn)
+  (lalt i) (pgup)
+  (lalt h) (left)
+  (lalt j) (down)
+  (lalt k) (up)
+  (lalt l) (rght)
+  (ralt u) (pgdn)
+  (ralt i) (pgup)
+  (ralt h) (left)
+  (ralt j) (down)
+  (ralt k) (up)
+  (ralt l) (rght)
+)
