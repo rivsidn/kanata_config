@@ -4,7 +4,11 @@
 
 (defcfg
   process-unmapped-keys yes
+  sequence-timeout 2000
 )
+
+;; Optional local-only macros. Missing include files are ignored by Kanata.
+(include kanata.private.kbd)
 
 (defvar
   td 200
@@ -17,6 +21,12 @@
 
   ;; Apostrophe is only a layer key; tapping it does not emit apostrophe.
   quo (layer-while-held symbols)
+
+  ;; Left Alt+Backspace reloads the current config; Backspace alone remains normal.
+  rld (fork bspc (multi (unmod (lalt) nop0) lrld) (lalt))
+
+  ;; Left Alt+m enters private macro sequence mode; m alone remains normal.
+  pmac (fork m (multi (release-key lalt) (macro sldr 10 nop2)) (lalt))
 
   ;; Force Caps output without carrying Shift through.
   cap (unshift caps)
@@ -45,10 +55,10 @@
 )
 
 (deflayer base
-  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    @rld
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   lctl a    s    d    f    g    h    j    k    l    ;    @quo      ret
-  @sfl z    x    c    v    b    n    m    ,    .    /              @sfr
+  @sfl z    x    c    v    b    n    @pmac ,    .    /              @sfr
   lctl lmet lalt                spc                 ralt rmet rctl
 )
 

@@ -19,11 +19,16 @@ fi
 
 kanata_dir="${XDG_CONFIG_HOME:-$HOME/.config}/kanata"
 kanata_cfg="$kanata_dir/kanata.kbd"
+kanata_private_src="kanata.private.kbd"
+kanata_private_cfg="$kanata_dir/kanata.private.kbd"
 service_tmp="$(mktemp --suffix=.service)"
 trap 'rm -f "$service_tmp"' EXIT
 
 install -d "$kanata_dir"
 install -m 0644 kanata.kbd "$kanata_cfg"
+if [ -f "$kanata_private_src" ]; then
+  install -m 0600 "$kanata_private_src" "$kanata_private_cfg"
+fi
 kanata_bin_sed="$(printf '%s' "$kanata_bin" | sed 's/[&|]/\\&/g')"
 kanata_cfg_sed="$(printf '%s' "$kanata_cfg" | sed 's/[&|]/\\&/g')"
 sed \

@@ -35,13 +35,13 @@
   </defs>
   <rect width="100%" height="100%" fill="url(#bg)"/>
   <text x="54" y="44" class="title">当前键位映射图</text>
-  <text x="54" y="73" class="subtitle">绿色：按住 ' 的符号/导航层；蓝色：左 Alt + U/I/H/J/K/L；橙色：层键与 Caps 组合。</text>
-  <text x="54" y="98" class="subtitle">Enter 为普通回车；' 仅作为层键；左 Alt+U/I 翻页，左 Alt+H/J/K/L 移动光标。</text>
+  <text x="54" y="73" class="subtitle">绿色：按住 ' 的符号/导航层；蓝色：左 Alt + Backspace/M/U/I/H/J/K/L；橙色：层键与 Caps 组合。</text>
+  <text x="54" y="98" class="subtitle">Enter 为普通回车；' 仅作为层键；左 Alt+Backspace 重载配置，左 Alt+M 后接数字/字母触发本地宏。</text>
 
 <rect x="54.0" y="114.0" width="24" height="24" rx="6" fill="#d9f4eb" stroke="#4da792" class="legendbox"/>
 <text x="88.0" y="126.0" class="legend">&#x27; 符号层</text>
 <rect x="186.0" y="114.0" width="24" height="24" rx="6" fill="#dfe9ff" stroke="#5d83d6" class="legendbox"/>
-<text x="220.0" y="126.0" class="legend">左 Alt 导航</text>
+<text x="220.0" y="126.0" class="legend">左 Alt 功能</text>
 <rect x="324.0" y="114.0" width="24" height="24" rx="6" fill="#ffe4b8" stroke="#d28b25" class="legendbox"/>
 <text x="358.0" y="126.0" class="legend">层键/基础映射</text>
 <g class="keywrap">
@@ -97,8 +97,10 @@
 <text x="950.0" y="177.0" class="main neutral_text" text-anchor="middle">=</text>
 </g>
 <g class="keywrap">
-<rect x="990.0" y="146.0" width="128.0" height="62.0" rx="11" class="key neutral"/>
-<text x="1054.0" y="177.0" class="main neutral_text wide" text-anchor="middle">Backspace</text>
+<rect x="990.0" y="146.0" width="128.0" height="62.0" rx="11" class="key alt"/>
+<text x="1000.0" y="162.0" class="phys" text-anchor="start">Backspace</text>
+<text x="1054.0" y="170.0" class="main alt_text wide" text-anchor="middle">Reload</text>
+<text x="1054.0" y="195.0" class="small alt_text" text-anchor="middle">LAlt+Bspc</text>
 </g>
 <g class="keywrap">
 <rect x="54.0" y="218.0" width="96.0" height="62.0" rx="11" class="key quote"/>
@@ -289,8 +291,10 @@
 <text x="606.0" y="393.0" class="main neutral_text" text-anchor="middle">N</text>
 </g>
 <g class="keywrap">
-<rect x="646.0" y="362.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
-<text x="678.0" y="393.0" class="main neutral_text" text-anchor="middle">M</text>
+<rect x="646.0" y="362.0" width="64.0" height="62.0" rx="11" class="key alt"/>
+<text x="656.0" y="378.0" class="phys" text-anchor="start">M</text>
+<text x="678.0" y="386.0" class="main alt_text wide" text-anchor="middle">Macro</text>
+<text x="678.0" y="411.0" class="small alt_text tiny" text-anchor="middle">LAlt+M,*</text>
 </g>
 <g class="keywrap">
 <rect x="718.0" y="362.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
@@ -322,7 +326,7 @@
 <rect x="254.0" y="434.0" width="80.0" height="62.0" rx="11" class="key alt"/>
 <text x="264.0" y="450.0" class="phys" text-anchor="start">Alt</text>
 <text x="294.0" y="458.0" class="main alt_text" text-anchor="middle">Alt</text>
-<text x="294.0" y="483.0" class="small alt_text" text-anchor="middle">Nav mod</text>
+<text x="294.0" y="483.0" class="small alt_text" text-anchor="middle">Nav/Rld/Mac</text>
 </g>
 <g class="keywrap">
 <rect x="342.0" y="434.0" width="400.0" height="62.0" rx="11" class="key neutral"/>
@@ -344,5 +348,5 @@
 <rect x="1014.0" y="434.0" width="80.0" height="62.0" rx="11" class="key neutral"/>
 <text x="1054.0" y="465.0" class="main neutral_text" text-anchor="middle">Ctrl</text>
 </g>
-<text x="54" y="576" class="subtitle">注：单独按 ' 无输出；按住 ' 后 Q 单点输出双引号、双点输出单引号；左 Alt+U/I 翻页，左 Alt+H/J/K/L 移动光标。</text>
+<text x="54" y="576" class="subtitle">注：单独按 ' 无输出；按住 ' 后 Q 单点输出双引号、双点输出单引号；左 Alt+M 后接数字/字母触发本地私有宏。</text>
 </svg>
