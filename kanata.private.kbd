@@ -1,9 +1,37 @@
-;; Local-only private macros. Do not commit this file.
-;; Trigger: hold Left Alt, press M, release Alt, then press one key below.
-;; Replace `(macro nop0)` with your private macro content.
-;; Examples:
+;; Local-only private macros. Do not commit real secrets here.
+;;
+;; Trigger
+;;   1. Hold Left Alt.
+;;   2. Press M.
+;;   3. Release Left Alt.
+;;   4. Press one configured digit or letter.
+;;
+;; Editing
+;;   Replace `(macro nop0)` with your private macro content.
+;;
+;; Examples
 ;;   private0 (macro h e l l o)
 ;;   privatea (macro S-h i)
+;;   privatee (macro h e l l o ret w o r l d)
+;;   privater (macro y g g z d c Digit1 Digit2 Digit3 S-grv ret)
+;;
+;; Macro Key Reference
+;;   Enter       ret
+;;   Space       spc
+;;   Tab         tab
+;;   Backspace   bspc
+;;   Escape      esc
+;;   Digits      Digit0 Digit1 Digit2 Digit3 Digit4 Digit5 Digit6 Digit7 Digit8 Digit9
+;;
+;; US-QWERTY Shifted Symbols
+;;   !  S-1      @  S-2      #  S-3      $  S-4      %  S-5
+;;   ^  S-6      &  S-7      *  S-8      (  S-9      )  S-0
+;;   _  S--      +  S-=      ~  S-grv
+;;
+;; Important
+;;   Bare numbers inside `macro`, such as `1 2 3`, are millisecond delays.
+;;   Use `Digit1 Digit2 Digit3` when you want to output numeric keys.
+;;
 
 (defseq
   private0 (nop2 0)
