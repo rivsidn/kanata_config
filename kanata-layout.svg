@@ -35,13 +35,13 @@
   </defs>
   <rect width="100%" height="100%" fill="url(#bg)"/>
   <text x="54" y="44" class="title">当前键位映射图</text>
-  <text x="54" y="73" class="subtitle">绿色：按住 ' 的符号/导航层；蓝色：Alt + U/I/H/J/K/L；橙色：层键与 Caps 组合。</text>
-  <text x="54" y="98" class="subtitle">Enter 为普通回车；' 仅作为层键；Alt+U/I 翻页，Alt+H/J/K/L 移动光标。</text>
+  <text x="54" y="73" class="subtitle">绿色：按住 ' 的符号/导航层；蓝色：左 Alt + U/I/H/J/K/L；橙色：层键与 Caps 组合。</text>
+  <text x="54" y="98" class="subtitle">Enter 为普通回车；' 仅作为层键；左 Alt+U/I 翻页，左 Alt+H/J/K/L 移动光标。</text>
 
 <rect x="54.0" y="114.0" width="24" height="24" rx="6" fill="#d9f4eb" stroke="#4da792" class="legendbox"/>
 <text x="88.0" y="126.0" class="legend">&#x27; 符号层</text>
 <rect x="186.0" y="114.0" width="24" height="24" rx="6" fill="#dfe9ff" stroke="#5d83d6" class="legendbox"/>
-<text x="220.0" y="126.0" class="legend">Alt 导航</text>
+<text x="220.0" y="126.0" class="legend">左 Alt 导航</text>
 <rect x="324.0" y="114.0" width="24" height="24" rx="6" fill="#ffe4b8" stroke="#d28b25" class="legendbox"/>
 <text x="358.0" y="126.0" class="legend">层键/基础映射</text>
 <g class="keywrap">
@@ -144,13 +144,13 @@
 <rect x="590.0" y="218.0" width="64.0" height="62.0" rx="11" class="key alt"/>
 <text x="600.0" y="234.0" class="phys" text-anchor="start">U</text>
 <text x="622.0" y="242.0" class="main alt_text wide" text-anchor="middle">PgDn</text>
-<text x="622.0" y="267.0" class="small alt_text" text-anchor="middle">Alt+U</text>
+<text x="622.0" y="267.0" class="small alt_text" text-anchor="middle">LAlt+U</text>
 </g>
 <g class="keywrap">
 <rect x="662.0" y="218.0" width="64.0" height="62.0" rx="11" class="key alt"/>
 <text x="672.0" y="234.0" class="phys" text-anchor="start">I</text>
 <text x="694.0" y="242.0" class="main alt_text wide" text-anchor="middle">PgUp</text>
-<text x="694.0" y="267.0" class="small alt_text" text-anchor="middle">Alt+I</text>
+<text x="694.0" y="267.0" class="small alt_text" text-anchor="middle">LAlt+I</text>
 </g>
 <g class="keywrap">
 <rect x="734.0" y="218.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
@@ -214,26 +214,26 @@
 <rect x="538.0" y="290.0" width="64.0" height="62.0" rx="11" class="key alt"/>
 <text x="548.0" y="306.0" class="phys" text-anchor="start">H</text>
 <text x="570.0" y="314.0" class="main alt_text" text-anchor="middle">←</text>
-<text x="570.0" y="339.0" class="small alt_text" text-anchor="middle">Alt+H</text>
+<text x="570.0" y="339.0" class="small alt_text" text-anchor="middle">LAlt+H</text>
 </g>
 <g class="keywrap">
 <rect x="610.0" y="290.0" width="64.0" height="62.0" rx="11" class="key alt"/>
 <text x="620.0" y="306.0" class="phys" text-anchor="start">J</text>
 <text x="642.0" y="314.0" class="main alt_text" text-anchor="middle">↓</text>
-<text x="642.0" y="339.0" class="small alt_text" text-anchor="middle">Alt+J</text>
+<text x="642.0" y="339.0" class="small alt_text" text-anchor="middle">LAlt+J</text>
 </g>
 <g class="keywrap">
 <rect x="682.0" y="290.0" width="64.0" height="62.0" rx="11" class="key alt"/>
 <text x="692.0" y="306.0" class="phys" text-anchor="start">K</text>
 <text x="714.0" y="314.0" class="main alt_text" text-anchor="middle">↑</text>
-<text x="714.0" y="339.0" class="small alt_text" text-anchor="middle">Alt+K</text>
+<text x="714.0" y="339.0" class="small alt_text" text-anchor="middle">LAlt+K</text>
 </g>
 <g class="keywrap">
 <rect x="754.0" y="290.0" width="64.0" height="62.0" rx="11" class="key quote"/>
 <rect x="760.0" y="329.0" width="52.0" height="17" rx="8" class="altchip"/>
 <text x="764.0" y="306.0" class="phys" text-anchor="start">L</text>
 <text x="786.0" y="314.0" class="main quote_text" text-anchor="middle">←</text>
-<text x="786.0" y="339.0" class="small alt_text tiny" text-anchor="middle">&#x27;+L / Alt+L→</text>
+<text x="786.0" y="339.0" class="small alt_text tiny" text-anchor="middle">&#x27;+L / LAlt+L→</text>
 </g>
 <g class="keywrap">
 <rect x="826.0" y="290.0" width="64.0" height="62.0" rx="11" class="key quote"/>
@@ -329,10 +329,8 @@
 <text x="542.0" y="465.0" class="main neutral_text wide" text-anchor="middle">Space</text>
 </g>
 <g class="keywrap">
-<rect x="750.0" y="434.0" width="80.0" height="62.0" rx="11" class="key alt"/>
-<text x="760.0" y="450.0" class="phys" text-anchor="start">Alt</text>
-<text x="790.0" y="458.0" class="main alt_text" text-anchor="middle">Alt</text>
-<text x="790.0" y="483.0" class="small alt_text" text-anchor="middle">Nav mod</text>
+<rect x="750.0" y="434.0" width="80.0" height="62.0" rx="11" class="key neutral"/>
+<text x="790.0" y="465.0" class="main neutral_text" text-anchor="middle">Alt</text>
 </g>
 <g class="keywrap">
 <rect x="838.0" y="434.0" width="80.0" height="62.0" rx="11" class="key neutral"/>
@@ -346,5 +344,5 @@
 <rect x="1014.0" y="434.0" width="80.0" height="62.0" rx="11" class="key neutral"/>
 <text x="1054.0" y="465.0" class="main neutral_text" text-anchor="middle">Ctrl</text>
 </g>
-<text x="54" y="576" class="subtitle">注：单独按 ' 无输出；按住 ' 后 Q 单点输出双引号、双点输出单引号；Alt+U/I 翻页，Alt+H/J/K/L 移动光标。</text>
+<text x="54" y="576" class="subtitle">注：单独按 ' 无输出；按住 ' 后 Q 单点输出双引号、双点输出单引号；左 Alt+U/I 翻页，左 Alt+H/J/K/L 移动光标。</text>
 </svg>

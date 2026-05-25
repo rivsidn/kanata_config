@@ -70,8 +70,7 @@
   _    _    _                   _                   _    _    _
 )
 
-;; Alt+u/i -> Page Down/Page Up; Alt+h/j/k/l -> arrow keys.
-;; Both left and right Alt are supported.
+;; Left Alt+u/i -> Page Down/Page Up; Left Alt+h/j/k/l -> arrow keys.
 (defoverrides
   (lalt u) (pgdn)
   (lalt i) (pgup)
@@ -79,10 +78,4 @@
   (lalt j) (down)
   (lalt k) (up)
   (lalt l) (rght)
-  (ralt u) (pgdn)
-  (ralt i) (pgup)
-  (ralt h) (left)
-  (ralt j) (down)
-  (ralt k) (up)
-  (ralt l) (rght)
 )
