@@ -35,13 +35,13 @@
   </defs>
   <rect width="100%" height="100%" fill="url(#bg)"/>
   <text x="54" y="44" class="title">当前键位映射图</text>
-  <text x="54" y="73" class="subtitle">绿色：按住 ' 的符号/导航层；蓝色：Alt + B/N/M/U/I/H/J/K/L；橙色：层键与 Caps 组合。</text>
-  <text x="54" y="98" class="subtitle">Enter 为普通回车；' 仅作为层键；Alt+N 数字开始录制，Alt+B 停止录制，Alt+M 数字回放。</text>
+  <text x="54" y="73" class="subtitle">绿色：按住 ' 的符号/导航层；蓝色：Alt + U/I/H/J/K/L；橙色：层键与 Caps 组合。</text>
+  <text x="54" y="98" class="subtitle">Enter 为普通回车；' 仅作为层键；Alt+U/I 翻页，Alt+H/J/K/L 移动光标。</text>
 
 <rect x="54.0" y="114.0" width="24" height="24" rx="6" fill="#d9f4eb" stroke="#4da792" class="legendbox"/>
 <text x="88.0" y="126.0" class="legend">&#x27; 符号层</text>
 <rect x="186.0" y="114.0" width="24" height="24" rx="6" fill="#dfe9ff" stroke="#5d83d6" class="legendbox"/>
-<text x="220.0" y="126.0" class="legend">Alt 导航/宏</text>
+<text x="220.0" y="126.0" class="legend">Alt 导航</text>
 <rect x="324.0" y="114.0" width="24" height="24" rx="6" fill="#ffe4b8" stroke="#d28b25" class="legendbox"/>
 <text x="358.0" y="126.0" class="legend">层键/基础映射</text>
 <g class="keywrap">
@@ -281,22 +281,16 @@
 <text x="462.0" y="411.0" class="small quote_text" text-anchor="middle">&#x27;+V</text>
 </g>
 <g class="keywrap">
-<rect x="502.0" y="362.0" width="64.0" height="62.0" rx="11" class="key alt"/>
-<text x="512.0" y="378.0" class="phys" text-anchor="start">B</text>
-<text x="534.0" y="386.0" class="main alt_text wide" text-anchor="middle">停止</text>
-<text x="534.0" y="411.0" class="small alt_text" text-anchor="middle">Alt+B</text>
+<rect x="502.0" y="362.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
+<text x="534.0" y="393.0" class="main neutral_text" text-anchor="middle">B</text>
 </g>
 <g class="keywrap">
-<rect x="574.0" y="362.0" width="64.0" height="62.0" rx="11" class="key alt"/>
-<text x="584.0" y="378.0" class="phys" text-anchor="start">N</text>
-<text x="606.0" y="386.0" class="main alt_text wide" text-anchor="middle">录制</text>
-<text x="606.0" y="411.0" class="small alt_text tiny" text-anchor="middle">Alt+N,#</text>
+<rect x="574.0" y="362.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
+<text x="606.0" y="393.0" class="main neutral_text" text-anchor="middle">N</text>
 </g>
 <g class="keywrap">
-<rect x="646.0" y="362.0" width="64.0" height="62.0" rx="11" class="key alt"/>
-<text x="656.0" y="378.0" class="phys" text-anchor="start">M</text>
-<text x="678.0" y="386.0" class="main alt_text wide" text-anchor="middle">回放</text>
-<text x="678.0" y="411.0" class="small alt_text tiny" text-anchor="middle">Alt+M,#</text>
+<rect x="646.0" y="362.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
+<text x="678.0" y="393.0" class="main neutral_text" text-anchor="middle">M</text>
 </g>
 <g class="keywrap">
 <rect x="718.0" y="362.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
@@ -352,5 +346,5 @@
 <rect x="1014.0" y="434.0" width="80.0" height="62.0" rx="11" class="key neutral"/>
 <text x="1054.0" y="465.0" class="main neutral_text" text-anchor="middle">Ctrl</text>
 </g>
-<text x="54" y="576" class="subtitle">注：单独按 ' 无输出；按住 ' 后 Q 单点输出双引号、双点输出单引号；Alt+N 后接 0-9 录制，Alt+B 停止，Alt+M 后接 0-9 回放。</text>
+<text x="54" y="576" class="subtitle">注：单独按 ' 无输出；按住 ' 后 Q 单点输出双引号、双点输出单引号；Alt+U/I 翻页，Alt+H/J/K/L 移动光标。</text>
 </svg>
