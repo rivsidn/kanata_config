@@ -81,11 +81,12 @@
 )
 
 ;; Left Alt+u/i -> Page Down/Page Up; Left Alt+h/j/k/l -> arrow keys.
-(defoverrides
-  (lalt u) (pgdn)
-  (lalt i) (pgup)
-  (lalt h) (left)
-  (lalt j) (down)
-  (lalt k) (up)
-  (lalt l) (rght)
+;; Keep Ctrl+Alt+h/j/k/l available for tmux pane navigation.
+(defoverridesv2
+  (lalt u) (pgdn) () ()
+  (lalt i) (pgup) () ()
+  (lalt h) (left) (lctl rctl) ()
+  (lalt j) (down) (lctl rctl) ()
+  (lalt k) (up)   (lctl rctl) ()
+  (lalt l) (rght) (lctl rctl) ()
 )
