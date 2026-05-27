@@ -133,10 +133,8 @@
 <text x="406.0" y="267.0" class="small quote_text" text-anchor="middle">双点: )</text>
 </g>
 <g class="keywrap">
-<rect x="446.0" y="218.0" width="64.0" height="62.0" rx="11" class="key quote"/>
-<text x="456.0" y="234.0" class="phys" text-anchor="start">T</text>
-<text x="478.0" y="242.0" class="main quote_text" text-anchor="middle">|</text>
-<text x="478.0" y="267.0" class="small quote_text" text-anchor="middle">&#x27;+T</text>
+<rect x="446.0" y="218.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
+<text x="478.0" y="249.0" class="main neutral_text" text-anchor="middle">T</text>
 </g>
 <g class="keywrap">
 <rect x="518.0" y="218.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
@@ -191,8 +189,10 @@
 <text x="282.0" y="321.0" class="main neutral_text" text-anchor="middle">S</text>
 </g>
 <g class="keywrap">
-<rect x="322.0" y="290.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
-<text x="354.0" y="321.0" class="main neutral_text" text-anchor="middle">D</text>
+<rect x="322.0" y="290.0" width="64.0" height="62.0" rx="11" class="key quote"/>
+<text x="332.0" y="306.0" class="phys" text-anchor="start">D</text>
+<text x="354.0" y="314.0" class="main quote_text" text-anchor="middle">|</text>
+<text x="354.0" y="339.0" class="small quote_text" text-anchor="middle">&#x27;+D</text>
 </g>
 <g class="keywrap">
 <rect x="394.0" y="290.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
