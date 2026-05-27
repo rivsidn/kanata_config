@@ -1,6 +1,36 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+force_private=0
+
+usage() {
+  cat <<'EOF'
+Usage: ./install.sh [--force-private]
+
+Options:
+  --force-private  Overwrite an existing kanata.private.kbd.
+  -h, --help       Show this help.
+EOF
+}
+
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --force-private)
+      force_private=1
+      ;;
+    -h|--help)
+      usage
+      exit 0
+      ;;
+    *)
+      echo "Unknown option: $1" >&2
+      usage >&2
+      exit 1
+      ;;
+  esac
+  shift
+done
+
 cd "$(dirname "$0")"
 
 if [ "$(id -u)" -eq 0 ]; then
@@ -26,7 +56,7 @@ trap 'rm -f "$service_tmp"' EXIT
 
 install -d "$kanata_dir"
 install -m 0644 kanata.kbd "$kanata_cfg"
-if [ -f "$kanata_private_src" ]; then
+if [ -f "$kanata_private_src" ] && { [ ! -e "$kanata_private_cfg" ] || [ "$force_private" -eq 1 ]; }; then
   install -m 0600 "$kanata_private_src" "$kanata_private_cfg"
 fi
 kanata_bin_sed="$(printf '%s' "$kanata_bin" | sed 's/[&|]/\\&/g')"
