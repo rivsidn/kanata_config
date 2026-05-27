@@ -133,8 +133,10 @@
 <text x="406.0" y="267.0" class="small quote_text" text-anchor="middle">双点: )</text>
 </g>
 <g class="keywrap">
-<rect x="446.0" y="218.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
-<text x="478.0" y="249.0" class="main neutral_text" text-anchor="middle">T</text>
+<rect x="446.0" y="218.0" width="64.0" height="62.0" rx="11" class="key quote"/>
+<text x="456.0" y="234.0" class="phys" text-anchor="start">T</text>
+<text x="478.0" y="242.0" class="main quote_text" text-anchor="middle">|</text>
+<text x="478.0" y="267.0" class="small quote_text" text-anchor="middle">&#x27;+T</text>
 </g>
 <g class="keywrap">
 <rect x="518.0" y="218.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
@@ -181,18 +183,20 @@
 <text x="114.0" y="339.0" class="small trigger_text tiny" text-anchor="middle">S+Caps · &#x27;+Caps→Bspc</text>
 </g>
 <g class="keywrap">
-<rect x="178.0" y="290.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
-<text x="210.0" y="321.0" class="main neutral_text" text-anchor="middle">A</text>
+<rect x="178.0" y="290.0" width="64.0" height="62.0" rx="11" class="key quote"/>
+<text x="188.0" y="306.0" class="phys" text-anchor="start">A</text>
+<text x="210.0" y="314.0" class="main quote_text" text-anchor="middle">+</text>
+<text x="210.0" y="339.0" class="small quote_text" text-anchor="middle">&#x27;+A</text>
 </g>
 <g class="keywrap">
-<rect x="250.0" y="290.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
-<text x="282.0" y="321.0" class="main neutral_text" text-anchor="middle">S</text>
+<rect x="250.0" y="290.0" width="64.0" height="62.0" rx="11" class="key quote"/>
+<text x="260.0" y="306.0" class="phys" text-anchor="start">S</text>
+<text x="282.0" y="314.0" class="main quote_text" text-anchor="middle">-</text>
+<text x="282.0" y="339.0" class="small quote_text" text-anchor="middle">&#x27;+S</text>
 </g>
 <g class="keywrap">
-<rect x="322.0" y="290.0" width="64.0" height="62.0" rx="11" class="key quote"/>
-<text x="332.0" y="306.0" class="phys" text-anchor="start">D</text>
-<text x="354.0" y="314.0" class="main quote_text" text-anchor="middle">|</text>
-<text x="354.0" y="339.0" class="small quote_text" text-anchor="middle">&#x27;+D</text>
+<rect x="322.0" y="290.0" width="64.0" height="62.0" rx="11" class="key neutral"/>
+<text x="354.0" y="321.0" class="main neutral_text" text-anchor="middle">D</text>
 </g>
 <g class="keywrap">
 <rect x="394.0" y="290.0" width="64.0" height="62.0" rx="11" class="key neutral"/>

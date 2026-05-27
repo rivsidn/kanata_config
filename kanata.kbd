@@ -41,6 +41,7 @@
   ;; Symbols that require Shift on a US-QWERTY layout.
   pipe S-\
   plus S-=
+  minus -
   star S-8
   us   S--
   ques S-/
@@ -74,8 +75,8 @@
 ;; Hold apostrophe, then press a key in this layer.
 (deflayer symbols
   _    _    _    _    _    _    _    _    _    _    _    _     _    _
-  esc  @dq  @cb  @br  @pr  _     _    _    _    _    up   _     _    _
-  bspc _     _    @pipe _    _    _    _    _    left rght _          _
+  esc  @dq  @cb  @br  @pr  @pipe _    _    _    _    up   _     _    _
+  bspc @plus @minus _    _    _    _    _    _    left rght _          _
   _    @us  _     _    \    _    _    _    _    down _               _
   _    _    _                   _                   _    _    _
 )
